@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Phone API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+ 
+    
+    <div class="grid-con" id="app">
+        <div class="col-span-full l-col-span-full" id="top">
+            <h2>Search Our Top Rated Products</h2>
+            <p>Explore our comprehensive inventory; we proudly showcase products from all major cellphone manufacturers spanning the globe. Discover an array of cutting-edge devices tailored to suit your needs and preferences.</p>
+        </div>
+        <div class="col-span-full m-col-span-4 l-col-span-4">
+            <input type="text" v-model="searchQuery" placeholder="Search phones..." class="search-input">
+            <ul id="phone-list">
+                <li v-for="phone in filteredPhonesData" :key="phone.id">
+                    <h3>{{ phone.brand }} {{ phone.model }}</h3>
+                    <h4>Release Year: {{ phone.release_year }}</h4>
+                    <h4>Category: {{ phone.category }}</h4>
+                    <button @click="getPhoneDetails(phone.id)">Select</button>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="col-span-full m-col-span-8 l-col-span-8" id="phone-infoCon" v-if="selectedPhone">
+            <div v-if="error" class="error-message">{{error}}</div>
+            <div v-if="selectedPhone" id="phone-details">
+                <h3>{{ selectedPhone.full_name }}</h3>
+                <img v-bind:src="selectedPhone.image_url" alt="Phone Image" v-if="selectedPhone.image_url">
+                <p>Brand: {{ selectedPhone.brand }}</p>
+                <p>Model: {{ selectedPhone.model }}</p>
+                <p>Release Year: {{ selectedPhone.release_year }}</p>
+                <p>Category: {{ selectedPhone.category }}</p>
+                <p>Rating: {{ selectedPhone.rating }}</p>
+                <p>Price Range: {{ selectedPhone.price_range }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
