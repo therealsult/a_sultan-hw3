@@ -1,0 +1,145 @@
+body {
+  font-family: "Saira Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #080808;
+  color: #ffffff; /* Change text color to white */
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+h2 {
+  color: #1abc9c; /* Change heading color */
+  font-size: 2.5rem; /* Increase font size */
+}
+
+h3 {
+  font-size: 1.5rem; /* Adjust font size */
+  margin-bottom: 15px; /* Adjust bottom margin */
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.1rem; /* Adjust font size */
+  margin-bottom: 25px; /* Increase bottom margin */
+}
+
+#more-content {
+  background-color: #4a4a4a; /* Darker background color */
+  height: 200px;
+}
+
+#phone-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem; /* Adjust font size */
+}
+
+#phone-list li {
+  margin-bottom: 40px; /* Increase bottom margin */
+  background-color: #666666; /* Darker background color */
+  padding: 15px; /* Increase padding */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#top {
+  margin-bottom: 40px;
+}
+
+#app {
+  padding: 30px; /* Increase padding */
+  max-width: 1200px;
+  margin: auto;
+}
+
+#phone-infoCon {
+  background-color: #2d2d2d; /* Darker background color */
+  padding: 30px; /* Increase padding */
+}
+
+a {
+  color: #3498db; /* Change link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adjust border radius */
+}
+
+button {
+  background-color: #1abc9c; /* Change button color */
+  color: #ffffff; /* Change button text color */
+  border: none;
+  padding: 8px 30px; /* Increase padding */
+   cursor: pointer;
+  margin-top: 20px; /* Increase top margin */
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color:#20a48a; /* Darken button color on hover */
+}
+
+.search-input {
+  font-size: 1.1rem;
+  padding: 15px; /* Increase padding */
+  width: 100%;
+  border: 2px solid #0f5c4d; /* Darker border color */
+  border-radius: 10px; /* Increase border radius */
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  color: #ffffff; /* Change input text color */
+  background-color: #000000; /* Darker background color */
+}
+
+.search-input:focus {
+  border-color: #1abc9c; /* Change border color on focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #cccccc; /* Lighter placeholder text color */
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+.loading-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 24px;
+  z-index: 100;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bold p {
+  font-size: 56px;
+}
